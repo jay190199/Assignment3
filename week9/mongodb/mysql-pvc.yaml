@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-pvc 
+  name: mysql-pvc
+  namespace: lab3
 spec:
   resources:
     requests:
-      storage: 1Gi
+      storage: 4Gi
   accessModes:
   - ReadWriteOnce
-  storageClassName: ""
+  storageClassName: "standard"
