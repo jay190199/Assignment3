@@ -10,3 +10,5 @@ spec:
   accessModes:
   - ReadWriteOnce
   storageClassName: "localstorage"
+  hostPath:
+    path: "/tmp/data"
