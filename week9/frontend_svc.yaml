@@ -4,7 +4,7 @@ metadata:
   name: frontend-lb
 spec:
   selector:
-    name: guestbook
+    name: webapp
     component: frontend
     app: mysql
   ports:
