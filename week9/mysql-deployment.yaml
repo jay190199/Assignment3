@@ -22,10 +22,7 @@ spec:
         image: < Image URI >
         env:
         - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret
-              key: password
+          value: pw
         ports:
         - containerPort: 3306
         volumeMounts:
@@ -34,4 +31,4 @@ spec:
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
-            claimName: mysql-pv-claim
+            claimName: mysql-pvc
