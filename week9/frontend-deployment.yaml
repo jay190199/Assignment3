@@ -3,27 +3,24 @@ kind: Deployment
 metadata:
   name: webapp
   labels:
-    name: webapp
-    component: frontend
+    app: webapp
   namespace: lab3
 spec:
   selector:
     matchLabels:
-      name: webapp
-      component: frontend
+      app: webapp
   replicas: 2
   template:
     metadata:
       labels:
-        name: webapp
-        component: frontend
+        app: webapp
     spec:
       containers:
       - name: webapp
         image: <  Image URI  >
          env:
           - name: DBHOST
-            value: "mysqldb.lab3"
+            value: "mysql"
           - name: DBPORT
             value: "3306"
           - name: DBUSER
